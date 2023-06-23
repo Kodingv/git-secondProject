@@ -10,7 +10,7 @@ interface ObjType {
 
 
 function Register(){
-  let [region] = useState(['구좌읍', '남원읍', '대정읍', '마라도', '서귀포시', '성산읍', '애월읍', '안덕면', '우도', '제주시', '조천읍', '표선면', '한경면', '한라산', '한림읍']);
+  const [region] = useState(['구좌읍', '남원읍', '대정읍', '마라도', '서귀포시', '성산읍', '애월읍', '안덕면', '우도', '제주시', '조천읍', '표선면', '한경면', '한라산', '한림읍']);
   let [obj, setObj] =  useState<ObjType>();
 
   useEffect(() => {
@@ -39,7 +39,7 @@ function Register(){
   }, [obj]);
 
   return(
-    <div className="register-container">
+    <main className="register-container">
       <h3>Registering<br/> A <br/> Place</h3>
       <div className="register-main-container">
         <label htmlFor="placeLocation"> Place's Location
@@ -104,7 +104,7 @@ function Register(){
           }
         }}>Register</button>
       </div>
-    </div>
+    </main>
   )
 }
 

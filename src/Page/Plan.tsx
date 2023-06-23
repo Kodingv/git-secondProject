@@ -85,11 +85,7 @@ function Plan(){
   }, [reset])
 
   return(
-    <div className="plan-container">
-      {/* <button className="reset-btn" onClick={() => {
-        dispatch(AllReset());
-        window.location.reload();
-      }}><i className="ri-refresh-line"></i></button> */}
+    <main className="plan-container">
       <h3>My Plan</h3>
       <div className="deleteDay-btn" onClick={() => {
         dispatch(removeDay(delArr));
@@ -110,7 +106,7 @@ function Plan(){
           }
         </ul>
       </div>
-    </div>
+    </main>
   )
 }
 

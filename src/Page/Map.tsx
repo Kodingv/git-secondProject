@@ -26,8 +26,6 @@ function Map(){
     } else {
       return
     }
-    // getItem = JSON.parse(getItem);
-    // dispatch(setting(getItem));
   }, [])
 
   useEffect(() => {
@@ -41,8 +39,6 @@ function Map(){
         } else {
           return
         }
-        // $('.map-flag').eq(i).css('top', `${findValue.top}%`);
-        // $('.map-flag').eq(i).css('left', `${findValue.left}%`);
       })
     } else {
       return
@@ -58,7 +54,7 @@ function Map(){
   },[infoArr])
 
   return (
-    <div className="map-container">
+    <main className="map-container">
       <h3>Map</h3>
       <div className='map-input-container'>
         <label htmlFor='input-schedule'>
@@ -123,7 +119,7 @@ function Map(){
           })
         }
       </div>
-    </div>
+    </main>
   )
 }
 

@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import './App.css';
 import $ from 'jquery';
 import { Routes, Route } from 'react-router-dom';
@@ -62,7 +62,6 @@ function App() {
 
       <Routes>
         <Route path="/" element={
-          <>
           <main>
             <div className="main-container">
               <div className='main-name'>
@@ -81,7 +80,6 @@ function App() {
               </div>
             </div>
           </main>
-          </>
         }></Route>
 
         <Route path="/Map" element={ <Map></Map> } />

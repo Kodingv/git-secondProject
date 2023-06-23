@@ -1,3 +1,4 @@
+/* BASE */
 @import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Righteous&display=swap');
 
 :root {
@@ -390,17 +391,6 @@ li.circle {
 .plan-main-container > ul > li:last-child > i {
   visibility: hidden;
 }
-
-/* .reset-btn {
-  position: absolute;
-  top: 0.5rem;
-  left: 0.5rem;
-  background-color: #fff;
-  border: none;
-  font-size: 1.4rem;
-  color: red;
-  transition: opacity 0.3s;
-} */
 
 .deleteDay-btn {
   position: absolute;

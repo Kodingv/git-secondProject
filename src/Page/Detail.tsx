@@ -20,7 +20,7 @@ function Detail(){
   let dispatch = useDispatch<AppDispatch>();
 
   return(
-    <div className="detail-container">
+    <main className="detail-container">
       <h3>Day {id}</h3>
       <button className="detail-saveBtn" onClick={() => {
         let timeNodes = [...$('.detail-location-time')];
@@ -59,7 +59,7 @@ function Detail(){
           })
         }
       </div>
-    </div>
+    </main>
   )
 }
 
