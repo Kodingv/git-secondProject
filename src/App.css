@@ -102,8 +102,8 @@ input::-webkit-inner-spin-button {
 
 .img-container {
   position: absolute;
-  top: 0;
-  left: 0;
+  display: flex;
+  justify-content: center;
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -137,9 +137,15 @@ input::-webkit-inner-spin-button {
 .img-container > img:nth-child(4){
   position: absolute;
   bottom: -100%;
-  left: 0;
-  width: 100%;
+  /* width: 100%; */
   transition: bottom 3s linear;
+}
+
+/* Plane Position in Mobile */
+@media screen and (max-width: 520px){
+  .img-container > img:nth-child(4) {
+    width: 100%;
+  }
 }
 
 
