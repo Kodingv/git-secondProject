@@ -1,12 +1,17 @@
-import { useEffect } from 'react';
+import { lazy, Suspense, useEffect } from 'react';
 import './App.css';
 import $ from 'jquery';
 import { Routes, Route } from 'react-router-dom';
 import {Footer} from './Page/Footer';
-import {Register} from './Page/Register';
-import {Plan} from './Page/Plan';
-import {Detail} from './Page/Detail';
-import {Map} from './Page/Map';
+// import {Register} from './Page/Register';
+// import {Plan} from './Page/Plan';
+// import {Detail} from './Page/Detail';
+// import {Map} from './Page/Map';
+
+const Register = lazy(() => import('./Page/Register'));
+const Plan = lazy(() => import('./Page/Plan'));
+const Detail = lazy(() => import('./Page/Detail'));
+const Map = lazy(() => import('./Page/Map'));
 
 function App() {
 
@@ -41,9 +46,9 @@ function App() {
       $('.main-name > h1').css('opacity', '1');
     }, 4800)
 
-    // h3
+    // h2
     setTimeout(() => {
-      $('.main-name > h3').css('opacity', '1');
+      $('.main-name > h2').css('opacity', '1');
     }, 5800)
 
   }, [])
@@ -59,42 +64,64 @@ function App() {
 
   return (
     <div className="App">
-
-      <Routes>
-        <Route path="/" element={
-          <main>
-            <div className="main-container">
-              <div className='main-name'>
-                <h1>
-                  Travel Planner
-                </h1>
-                <h3>
-                  (In JEJU)
-                </h3>
+      
+      <Suspense fallback={ <Loading/> }>
+        <Routes>
+          <Route path="/" element={
+            <main>
+              <div className="main-container">
+                <div className='main-name'>
+                  <h1>
+                    Travel Planner
+                  </h1>
+                  <h2>
+                    (In JEJU)
+                  </h2>
+                </div>
+                <div className="img-container">
+                  <img className='icon' src={process.env.PUBLIC_URL + "/img/carIcon1.png"} alt='A moving car'></img>
+                  <img className='icon' src={process.env.PUBLIC_URL + "/img/carIcon2.png"} alt='A moving car'></img>
+                  <img className='icon' src={process.env.PUBLIC_URL + "/img/carIcon3.png"} alt='A moving car'></img>
+                  <img className='icon' src={process.env.PUBLIC_URL + "/img/airplaneIcon4.png"} alt='A moving airplane'></img>
+                </div>
               </div>
-              <div className="img-container">
-                <img className='icon' src={process.env.PUBLIC_URL + "/img/carIcon1.png"}></img>
-                <img className='icon' src={process.env.PUBLIC_URL + "/img/carIcon2.png"}></img>
-                <img className='icon' src={process.env.PUBLIC_URL + "/img/carIcon3.png"}></img>
-                <img className='icon' src={process.env.PUBLIC_URL + "/img/airplaneIcon4.png"}></img>
-              </div>
-            </div>
-          </main>
-        }></Route>
-
-        <Route path="/Map" element={ <Map></Map> } />
-
-        <Route path="/Register" element={ <Register></Register> } />
-
-        <Route path="/Plan" element={ <Plan></Plan> } />
-
-        <Route path="/Plan/:id" element={ <Detail></Detail> }/>
-      </Routes>
+            </main>
+          }></Route>
+          <Route path="/Map" element={ <Map></Map> } />
+          <Route path="/Register" element={ <Register></Register> } />
+          <Route path="/Plan" element={ <Plan></Plan> } />
+          <Route path="/Plan/:id" element={ <Detail></Detail> }/>
+        </Routes>
+      </Suspense>
 
       <Footer />
   
     </div>
   );
+}
+
+
+function Loading(){
+
+  useEffect(() => {
+    const loadingArr = $('.loading-container > h1').text().split('');
+    let showText = '';
+    
+    loadingArr.forEach((value, i) => {
+      let time = Number(String(i) + '000');
+      setTimeout(() => {
+        showText += value;
+        $('.loading-container > h1').html(showText);
+        $('.loading-container > h1').css('opacity', '1');
+      }, time);
+    });
+  })
+
+  return(
+    <div className='loading-container'>
+      <h1>Loading...</h1>
+    </div>
+  )
 }
 
 

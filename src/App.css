@@ -53,6 +53,21 @@ input::-webkit-inner-spin-button {
   justify-content: center;
 }
 
+/* Loading Component Section */
+.loading-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading-container > h1 {
+  opacity: 0;
+  transition: opacity .3s;
+}
+
+
 @keyframes Sun {
   0% {
     color: var(--first-sun-color);
@@ -93,7 +108,7 @@ input::-webkit-inner-spin-button {
   transition: opactiy .3s;
 }
 
-.main-name > h3 {
+.main-name > h2 {
   padding-top: 5px;
   font-size: 1.2rem;
   opacity: 0;

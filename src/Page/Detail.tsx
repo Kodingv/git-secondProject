@@ -63,8 +63,8 @@ function Detail(){
   )
 }
 
-// Location Component를 하나 더 만들어서
-// Save 누르면 another Location Component로 state 관리
+
+// Save 누르면 dispatch해서 store에서 데이터 관리
 
 function Location({value, index, state, id, dispatch} : LocationType){
   let hourArr = new Array(24).fill(0);
@@ -90,22 +90,6 @@ function Location({value, index, state, id, dispatch} : LocationType){
               return(
                 <option key={i} value={num}>{num}</option>
               )
-
-              // if(state[id][index].time === undefined){
-              //   return(
-              //     <option key={i} value={num}>{num}</option>
-              //   )
-              // } else {
-              //   if(`${num}` === state[id][index].time[0]){
-              //     return(
-              //       <option key={i} value={num} selected>{num}</option>
-              //     )
-              //   } else {
-              //     return(
-              //       <option key={i} value={num}>{num}</option>
-              //     )
-              //   }
-              // }
             })
           }
         </select>
@@ -129,26 +113,6 @@ function Location({value, index, state, id, dispatch} : LocationType){
                   <option key={i} value={num}>{num}</option>
                 )
               }
-
-              // return(
-              //   <option key={i} value={num}>{str}</option>
-              // )
-
-              // if(state[id][index].time === undefined){
-              //   return(
-              //     <option key={i} value={num}>{num}</option>
-              //   )
-              // } else {
-              //   if(`${num}` === state[id][index].time[1]){
-              //     return(
-              //       <option key={i} value={num} selected>{num}</option>
-              //     )
-              //   } else {
-              //     return(
-              //       <option key={i} value={num}>{num}</option>
-              //     )
-              //   }
-              // }
             })
           }
         </select>
@@ -170,22 +134,6 @@ function Location({value, index, state, id, dispatch} : LocationType){
               return(
                 <option key={i} value={num}>{num}</option>
               )
-
-              // if(state[id][index].time === undefined){
-              //   return(
-              //     <option key={i} value={num}>{num}</option>
-              //   )
-              // } else {
-              //   if(`${num}` === state[id][index].time[2]){
-              //     return(
-              //       <option key={i} value={num} selected>{num}</option>
-              //     )
-              //   } else {
-              //     return(
-              //       <option key={i} value={num}>{num}</option>
-              //     )
-              //   }
-              // }
             })
           }
         </select>
@@ -209,22 +157,6 @@ function Location({value, index, state, id, dispatch} : LocationType){
                   <option key={i} value={num}>{num}</option>
                 )
               }
-
-              // if(state[id][index].time === undefined){
-              //   return(
-              //     <option key={i} value={num}>{num}</option>
-              //   )
-              // } else {
-              //   if(`${num}` === state[id][index].time[3]){
-              //     return(
-              //       <option key={i} value={num} selected>{num}</option>
-              //     )
-              //   } else {
-              //     return(
-              //       <option key={i} value={num}>{num}</option>
-              //     )
-              //   }
-              // }
             })
           }
         </select>
@@ -262,4 +194,4 @@ function Location({value, index, state, id, dispatch} : LocationType){
 }
 
 
-export {Detail}
+export default Detail

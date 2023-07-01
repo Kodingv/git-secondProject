@@ -1,6 +1,6 @@
 
 import $ from 'jquery';
-import { useEffect, useState, Dispatch, SetStateAction } from 'react';
+import { useEffect, useState, Dispatch, SetStateAction, memo } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { addDay, removeDay, RootState, DaysType } from '../store/store.ts';
 import { NavigateFunction, useNavigate } from 'react-router-dom';
@@ -143,7 +143,7 @@ function InputDays({setInputDays, dispatch} : InputDaysType){
   )
 }
 
-function PlanLi({index, state, click, setClick, delArr, setDelArr, navigate} : PlanLiType){
+const PlanLi = memo( function({index, state, click, setClick, delArr, setDelArr, navigate} : PlanLiType){
   return(
     <li>
       <h4 onClick={function(e){
@@ -188,8 +188,8 @@ function PlanLi({index, state, click, setClick, delArr, setDelArr, navigate} : P
       <i className="ri-arrow-down-circle-fill"></i>
     </li>
   )
-}
+} )
 
 
 
-export {Plan}
+export default Plan
