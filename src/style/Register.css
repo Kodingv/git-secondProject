@@ -1,0 +1,55 @@
+/* Register Section */
+.register-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 3rem;
+  align-items: center;
+  margin-bottom: 30vh;
+}
+
+.register-container > h3 {
+  font-size: 3rem;
+}
+
+.register-main-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+
+.register-main-container > label {
+  font-size: 1.5rem;
+}
+
+.register-main-container > label > select {
+  background-color: #fff;
+}
+
+.register-main-container > label > select > option {
+  color: black;
+}
+
+#placeLocation,
+#placeName,
+#placeCategory,
+#days {
+  padding: 10px;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid var(--third-sun-color);
+  font-size: 1.5rem;
+  font-family: var(--kr-font);
+}
+
+.register-button {
+  font-family: var(--en-font);
+  font-size: 1.5rem;
+  background: white;
+  color: black;
+  transition: color .3s;
+}
+
+.register-button:hover {
+  background: black;
+  color: white;
+}

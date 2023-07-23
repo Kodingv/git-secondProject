@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react';
 import $ from 'jquery';
 import { DaysType } from '../store/store';
+import './../style/Register.css'
 
 
 interface ObjType {

@@ -5,6 +5,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { addDay, removeDay, RootState, DaysType } from '../store/store.ts';
 import { NavigateFunction, useNavigate } from 'react-router-dom';
 import { AppDispatch } from './../index.js';
+import './../style/Plan.css';
 
 
 interface ClickType {

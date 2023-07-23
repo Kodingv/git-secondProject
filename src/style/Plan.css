@@ -1,0 +1,126 @@
+/* Plan Section */
+.plan-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  align-items: center;
+  margin-bottom: 15vh;
+  overflow-x: hidden;
+}
+
+.plan-container > h3 {
+  font-size: 2rem;
+}
+
+.days-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transition: opacity .3s;
+}
+
+.days-container > label {
+  font-size: 2rem;
+}
+
+#input-days {
+  width: 2rem;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding: 5px;
+  font-family: var(--en-font);
+  font-size: 2rem;
+  border: none;
+  border-bottom: 2px solid var(--third-sun-color);
+  color: var(--second-sun-color);
+}
+
+.confirm-button {
+  font-family: var(--en-font);
+  font-size: 1.5rem;
+  padding: 5px;
+  background-color: var(--footer-color);
+  color: #fff;
+  border-radius: 15px;
+  border: 2px solid var(--third-sun-color);
+  transition: all .2s;
+}
+
+.confirm-button:active {
+  color: var(--second-sun-color);
+  background: #fff;
+  border: 2px solid var(--footer-color);
+}
+
+.plan-main-container > ul {
+  display: grid;
+  grid-template-rows: 1fr;
+  row-gap: 1rem;
+  opacity: 0;
+  z-index: 100;
+  transition: opacity .4s;
+}
+
+.plan-main-container > ul > li {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  align-items: center;
+  font-size: 1.5rem;
+  color: var(--third-sun-color);
+  cursor: pointer;
+}
+
+.plan-li-category {
+  font-family: var(--kr-font);
+  font-size: 1.2rem;
+  color: var(--footer-color);
+  display: grid;
+  /* grid-template-columns: repeat(5, 1fr); */
+  align-items: center;
+  justify-content: center;
+  column-gap: 1.5rem;
+}
+
+.plan-li-category > span {
+  text-align: center;
+}
+
+.category-unit {
+  padding: 5px;
+  border-radius: 10px;
+  transition: border .1s;
+}
+
+.plan-main-container > ul > li > i {
+  color: var(--fourth-sun-color);
+}
+
+.plan-main-container > ul > li:last-child > i {
+  visibility: hidden;
+}
+
+.deleteDay-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  transition: opacity 0.3s;
+}
+
+.deleteDay-btn > i {
+  font-size: 1.5rem;
+  color: var(--second-sun-color);
+  transition: color .2s;
+}
+
+.deleteDay-btn > i:active {
+  color: var(--fourth-sun-color);
+}

@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router-dom"
 import { alignLocation, addTime, RootState, DaysType } from '../store/store.ts';
 import { AppDispatch } from '../index.js';
+import './../style/Detail.css';
 
 
 interface LocationType {

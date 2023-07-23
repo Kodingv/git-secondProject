@@ -1,0 +1,102 @@
+/* Detail Section */
+.detail-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 2rem;
+  margin-bottom: 15vh;
+}
+
+.detail-container > h3 {
+  font-size: 2rem;
+  color: var(--first-sun-color);
+}
+
+.detail-saveBtn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  padding: 3px;
+  font-family: var(--en-font);
+  font-size: 1rem;
+  color: var(--third-sun-color);
+  background-color: #fff;
+  border: 2px solid var(--fourth-sun-color);
+  border-radius: 5px;
+}
+
+.detail-schedule-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 3rem;
+}
+
+.detail-location-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.detail-location-time > select {
+  appearance: none;
+  margin: 0;
+  padding: 10px;
+  font-size: 1.2rem;
+  font-family: var(--en-font);
+  text-align: center;
+  border: none;
+  background-color: #fff;
+}
+
+.detail-location-time > select > option {
+  color: black;
+}
+
+.detail-location-time > select::-webkit-scrollbar {display:none;}
+/* .detail-location-time > select::-moz-scrollbar {display:none;}
+.detail-location-time > select::-o-scrollbar {display:none;}
+.detail-location-time > select::-google-ms-scrollbar {display:none;}
+.detail-location-time > select::-khtml-scrollbar {display:none;} */
+
+.detail-location-time > span {
+  font-size: 1.1rem;
+  color: var(--third-sun-color);
+}
+
+.detail-location {
+  border: 2px solid var(--second-sun-color);
+  border-radius: 1rem;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 4rem;
+}
+
+.ri-flag-fill {
+  color: var(--fourth-sun-color);
+  font-size: 1.3rem;
+}
+
+.detail-location > ul > li {
+  font-family: var(--kr-font);
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.detail-updown-btn {
+  display: flex;
+  flex-direction: column;
+  row-gap: .5rem;
+}
+
+.detail-updown-btn > button {
+  background-color: #fff;
+  border: none;
+  font-size: 1.3rem;
+  color: black;
+}

@@ -3,6 +3,7 @@ import { useEffect, useState } from "react"
 import { useDispatch, useSelector } from 'react-redux';
 import { setting, DaysType, RootState } from './../store/store.ts';
 import { AppDispatch } from '../index.js';
+import './../style/Map.css';
 
 
 interface LocationInfoType {
