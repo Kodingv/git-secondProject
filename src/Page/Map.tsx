@@ -62,7 +62,7 @@ function Map(){
           Day
           <input type="number" id='input-schedule'></input>
         </label>
-        <button className='map-search-btn' onClick={(e) => {
+        <button className='map-search-btn' aria-label='search' onClick={(e) => {
           if(state.days === null){
             window.alert('No registered shedules.');
             e.preventDefault();

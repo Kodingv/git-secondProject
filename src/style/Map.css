@@ -18,7 +18,7 @@
 
 .map-input-container > label {
   font-size: 1.3rem;
-  color: var(--second-sun-color);
+  color: black;
 }
 
 label > #input-schedule {
@@ -27,7 +27,7 @@ label > #input-schedule {
   width: 3rem;
   padding: 5px;
   font-size: 1.5rem;
-  color: var(--fourth-sun-color);
+  color: #705300;
   border: none;
   border-bottom: 2px solid black;
 }

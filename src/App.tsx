@@ -90,7 +90,7 @@ function App() {
           <Route path="/Map" element={ <Map></Map> } />
           <Route path="/Register" element={ <Register></Register> } />
           <Route path="/Plan" element={ <Plan></Plan> } />
-          <Route path="/Plan/:id" element={ <Detail></Detail> }/>
+          <Route path="/Plan/:id" element={ <Detail></Detail> } />
         </Routes>
       </Suspense>
 

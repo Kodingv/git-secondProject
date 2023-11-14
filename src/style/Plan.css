@@ -39,8 +39,8 @@
   font-family: var(--en-font);
   font-size: 2rem;
   border: none;
-  border-bottom: 2px solid var(--third-sun-color);
-  color: var(--second-sun-color);
+  border-bottom: 2px solid #705300;
+  color: #705300;
 }
 
 .confirm-button {
